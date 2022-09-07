@@ -43,21 +43,7 @@ router.post('/', (req, res) => {
     })
 })
 
-router.delete('/:code',(req,res) => {
-    const code = req.params.code;
 
-    var query = "DELETE FROM Items WHERE code=?"
-
-    connection.query(query,[code],(err,row) => {
-        if (err) console.log(err);
-
-        if (row.affectedRows > 0) {
-            res.send({ "message": "Item is deleted" })
-        } else {
-            res.send({ "message": "Item is not found. try again" })
-        }
-    })
-})
 
 router.put('/', (req, res) => {
     const code = req.body.code;
@@ -79,7 +65,6 @@ router.put('/', (req, res) => {
 })
 
 
-
 router.get('/:code',(req,res) => {
     const code = req.params.code;
 
@@ -91,7 +76,21 @@ router.get('/:code',(req,res) => {
     })
 })
 
+router.delete('/:code',(req,res) => {
+    const code = req.params.code;
 
+    var query = "DELETE FROM Items WHERE code=?"
+
+    connection.query(query,[code],(err,row) => {
+        if (err) console.log(err);
+
+        if (row.affectedRows > 0) {
+            res.send({ "Message": "Item is deleted" })
+        } else {
+            res.send({ "Message": "Item is not found.Please try again...!" })
+        }
+    })
+})
 
 
 module.exports = router
