@@ -86,7 +86,7 @@ router.delete('/:id',(req,res) => {
         if (row.affectedRows > 0) {
             res.send({ "message": "customer is deleted" })
         } else {
-            res.send({ "message": "customer is not found. try again" })
+            res.send({ "message": "customer is not found.Please try again...!" })
         }
     })
 })

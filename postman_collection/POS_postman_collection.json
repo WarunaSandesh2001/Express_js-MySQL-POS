@@ -62,7 +62,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\":\"C001\",\n    \"name\":\"waruna\",\n    \"address\":\"weligaama\",\n    \"salary\":45000\n}",
+							"raw": "{\n    \"id\":\"C001\",\n    \"name\":\"waruna\",\n    \"address\":\"weligama\",\n    \"salary\":45000\n}",
 							"options": {
 								"raw": {
 									"language": "json"
